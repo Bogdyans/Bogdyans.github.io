@@ -3,7 +3,7 @@ footer {
     align-items: flex-start;
     justify-content: space-between;
 }
-.main-block {
+main {
     align-self: center;
     display: block;
     max-width: 750px;
