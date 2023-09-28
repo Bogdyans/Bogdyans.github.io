@@ -1,4 +1,8 @@
-.main-block {
+footer {
+    display: flex;
+    justify-content: space-between;
+}
+main {
     align-self: center;
     display: block;
     max-width: 750px;
