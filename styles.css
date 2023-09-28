@@ -1,0 +1,149 @@
+.main-block {
+    align-self: center;
+    display: block;
+    max-width: 750px;
+    border: #d0eeee solid 5px;
+    border-radius: 10px;
+    background-color: antiquewhite;
+    margin: 5px auto;
+    text-align: center;
+    box-shadow: 2px 3px 3px darkgray;
+}
+.bl {
+    max-width: 700px;
+    margin: 10px auto 0;
+    border-radius: 5px;
+    border: #d0eeee solid 5px;
+    background-color: #FFFBE7;
+    padding: 10px;
+    transition: 0.3s;
+
+}
+span {
+    margin-left: auto;
+}
+
+
+
+.typewriter {
+    animation: letter 0.5s;
+    display: inline-block;
+}
+.blog img {
+    margin: 5px auto 0;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 2;
+    border: #d0eeee solid 4px;
+    box-shadow: 2px 3px 3px darkgray;
+    transition: 0.3s;
+}
+.blog div:hover {
+    transform: scale(1.2);
+    z-index: 3;
+    box-shadow: 3px 5px 5px darkgray;
+}
+.blog div img:hover{
+    transform: scale(10);
+}
+
+html {
+
+    background-color: #EADBC7FF;
+}
+.mas {
+    width: 200px;
+    height: 200px;
+}
+
+
+.tb {
+    border: chocolate solid 1px;
+    margin: 10px auto;
+
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    transition: 0.2s;
+}
+.container div {
+    width: 220px;
+    height: 250px;
+    border-radius: 20px;
+    margin: 10px;
+    transition: 0.5s;
+    z-index: 1;
+    border: #d0eeee solid 4px;
+    box-shadow: 2px 3px 3px darkgray;
+    background-color: #FFFBE7;
+}
+.container div img {
+    margin: 5px auto 0;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    z-index: 2;
+    border: #d0eeee solid 4px;
+    box-shadow: 2px 3px 3px darkgray;
+}
+.container div h2 {
+    margin-top: -1px;
+}
+.container div:hover {
+    transform: scale(1.5);
+    z-index: 3;
+    box-shadow: 3px 5px 5px darkgray;
+}
+
+
+h3 {
+    font-family: Broadway;
+    font-size: 1.5rem;
+}
+
+.img-footer{
+    transition: 1s;
+    z-index: 1;
+}
+
+.img-footer:hover{
+    z-index: 2;
+    transform: rotate(-15deg) scale(1.1);
+}
+.head-block nav{
+    margin-left: 10px;
+}
+.head-block {
+    text-align: center;
+    width: 100%;
+    max-width: 120%;
+    border-top: 0;
+    border-radius: 0 0 5px 5px ;
+    margin-top: -10px;
+    margin-left: -15px;
+    position: sticky;
+    padding: 10px;
+    top: -10px;
+    z-index: 4;
+}
+ul  {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+footer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
