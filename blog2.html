@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Blog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .post {
+            margin-bottom: 30px;
+        }
+
+        .post h2 {
+            color: #555;
+        }
+
+        .post .date {
+            color: #888;
+            font-size: 14px;
+        }
+
+        .post .content {
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .new-post-form {
+            margin-top: 30px;
+        }
+    </style>
+    <meta charset="UTF-8">
+</head>
+<body>
+<h1>Welcome to My Blog</h1>
+
+<div id="blog-posts">
+    <div class="post">
+        <h2>Post Title 1</h2>
+        <div class="date">Posted on October 1, 2023</div>
+        <div class="content">
+            <p>This is the content of the first blog post.</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam mattis, magna nec interdum rutrum, dolor ligula aliquet odio, et imperdiet ipsum leo vitae purus. Duis eleifend, dolor at vulputate dapibus, libero nunc lobortis mauris, at consequat orci turpis non velit.</p>
+        </div>
+    </div>
+
+    <div class="post">
+        <h2>Post Title 2</h2>
+        <div class="date">Posted on October 5, 2023</div>
+        <div class="content">
+            <p>This is the content of the second blog post.</p>
+            <p>Sed elementum turpis augue, ac egestas lorem sagittis id. Fusce mollis rhoncus diam eu efficitur. Sed bibendum quam ac sem imperdiet, id dignissim ipsum accumsan. Donec imperdiet at libero quis tincidunt.</p>
+        </div>
+    </div>
+</div>
+
+<form class="new-post-form">
+    <h3>Add a New Blog Post</h3>
+    <label>Title:</label>
+    <input type="text" id="post-title" required><br>
+    <label>Date:</label>
+    <input type="text" id="post-date" required><br>
+    <label>Content:</label>
+    <textarea id="post-content" required></textarea><br>
+    <button type="submit" onclick="addNewPost()">Add Post</button>
+</form>
+
+<script>
+    function addNewPost() {
+        // Get user input for the new blog post
+        var title = document.getElementById("post-title").value;
+        var date = document.getElementById("post-date").value;
+        var content = document.getElementById("post-content").value;
+
+        // Create a new post element
+        var postElem = document.createElement("div");
+        postElem.classList.add("post");
+
+        var titleElem = document.createElement("h2");
+        titleElem.textContent = title;
+
+        var dateElem = document.createElement("div");
+        dateElem.classList.add("date");
+        dateElem.textContent = "Posted on " + date;
+
+        var contentElem = document.createElement("div");
+        contentElem.classList.add("content");
+        contentElem.innerHTML = content;
+
+        // Add elements to the post container
+        postElem.appendChild(titleElem);
+        postElem.appendChild(dateElem);
+        postElem.appendChild(contentElem);
+
+        // Add the new post to the blog posts section
+        var blogPosts = document.getElementById("blog-posts");
+        blogPosts.appendChild(postElem);
+
+        // Clear the form fields
+        document.getElementById("post-title").value = "";
+        document.getElementById("post-date").value = "";
+        document.getElementById("post-content").value = "";
+    }
+</script>
+</body>
+</html>

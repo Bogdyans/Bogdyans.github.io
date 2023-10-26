@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Комментарии</title>
+</head>
+<body>
+<header>
+    <nav>
+        <div class="toolbar">
+            <div>
+                <a href="index.html" class="toolbar-nav-item selecteda log-div nav-border">
+                    <h1>Bogdyans.net</h1>
+                </a>
+                <a href="index.html" class="toolbar-nav-item selecteda log-div">
+                    <h1>Main</h1>
+                </a>
+                <a href="my-page.html" class="toolbar-nav-item">
+                    <h1>My Page</h1>
+                </a>
+                <a href="resume.html" class="toolbar-nav-item">
+                    <h1>Resume</h1>
+                </a>
+            </div>
+            <div>
+                <a href="login.html" class="toolbar-nav-item">
+                    <img src="imgs/login-icon.png">
+                </a>
+            </div>
+        </div>
+        <div class="navbar">
+            <ul class="nav-links">
+                <li class="nav-item"><a href="index.html" class="nav-link"><h1>Main</h1></a></li>
+                <li class="nav-item"><a href="photogallery.html" class="nav-link"><h1>Photogallery</h1></a></li>
+                <li class="nav-item  selected"><a href="blog.html" class="nav-link"><h1>Blog</h1></a></li>
+                <li class="nav-item"><a href="myResume.html" class="nav-link active"><h1>Bogdan's Resume</h1></a></li>
+                <li class="nav-item"><a href="note.html" class="nav-link"><h1>Note</h1></a></li>
+                <li class="nav-item"><a href="control2.html" class="nav-link"><h1>Контрольные</h1></a></li>
+            </ul>
+        </div>
+    </nav>
+</header>
+<h1>Комментарии</h1>
+
+<div id="comments">
+    <!-- Сюда будут добавляться комментарии -->
+</div>
+
+<h2>Оставить комментарий</h2>
+
+<form id="commentForm">
+    <input type="text" id="nameInput" placeholder="Ваше имя" required>
+    <br>
+    <label for="commentInput"> Ваш комментарий: <textarea id="commentInput" placeholder="Ваш комментарий" required></textarea></label>
+    <br>
+    <button type="submit">Отправить</button>
+</form>
+
+<script>
+    document.getElementById('commentForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Отменяем стандартное поведение формы
+
+        var name = document.getElementById('nameInput').value;
+        var comment = document.getElementById('commentInput').value;
+
+        addComment(name, comment);
+        document.getElementById('nameInput').value = '';
+        document.getElementById('commentInput').value = '';
+    });
+
+    function addComment(name, comment) {
+        var commentContainer = document.getElementById('comments');
+
+        var newComment = document.createElement('div');
+        newComment.innerHTML = '<h3>' + name + '</h3><p>' + comment + '</p>';
+
+        commentContainer.appendChild(newComment);
+    }
+</script>
+</body>
+</html>

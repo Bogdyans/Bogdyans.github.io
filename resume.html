@@ -1,73 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <link href="styles.css" rel="stylesheet">
   <meta charset="UTF-8">
-  <title>Seminar</title>
+  <title>Title</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="checkForm.js"></script>
 </head>
 <body>
-<header class="main-block head-block">
-  <div class="right-header">
-    <h2>Web</h2>
-    <img src="imgs/8835758.png" alt="crown" width="50px" height="50px">
-
-    <nav>
-      <ul>
-        <li><a href="header.html">Главная</a></li>
-        <li><a></a></li>
-        <li><a href="resume.html">Резюме</a></li>
-        <li><a href="photogallery.html">Фотогаллерея</a></li>
+<header>
+  <nav>
+    <div class="toolbar">
+      <div>
+        <a href="index.html" class="toolbar-nav-item selecteda">
+          <h1>Bogdyans.net</h1>
+        </a>
+        <a href="index.html" class="toolbar-nav-item">
+          <h1>Main</h1>
+        </a>
+        <a href="my-page.html" class="toolbar-nav-item">
+          <h1>My Page</h1>
+        </a>
+        <a href="resume.html" class="toolbar-nav-item  selecteda">
+          <h1>Resume</h1>
+        </a>
+      </div>
+      <div>
+        <a href="login.html" class="toolbar-nav-item">
+          <img src="imgs/login-icon.png">
+        </a>
+      </div>
+    </div>
+    <div class="navbar">
+      <ul class="nav-links">
+        <li class="nav-item selected"><a href="resume.html" class="nav-link"><h1>Send Resume</h1></a></li>
+        <li class="nav-item"><a href="demo-resume.html" class="nav-link"><h1>Demo Resume</h1></a></li>
       </ul>
-    </nav>
-  </div>
-  <div class="left-header"><a href="authorisation.html"><img src="imgs/login.png" width="50px" height="50px"></a></div>
+    </div>
+  </nav>
 </header>
-<main>
-  <div class="main-block">
-    <h3>Мое Резюме</h3>
-    <table class="tb">
-      <tr>
-        <td>
-           Место работы
-        </td>
-        <td>
-          Должность
-        </td>
-        <td>
-          Время
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Университет Дубна
-        </td>
-        <td>
-          Студент
-        </td>
-        <td>
-          2022-2025
-        </td>
-      </tr>
-      <tr>
-        <td>
-          Фуллстак дев
-        </td>
-        <td>
-          ОЭЗ
-        </td>
-        <td>
-          2025-...
-        </td>
-      </tr>
-    </table>
-  </div>
-</main>
-<footer class="main-block">
-  <h4>Богдан Барыкин</h4>
-  <p><a href="https://t.me/Bogdyan2" target="_blank"><img src="imgs/telegram-1.png" width="75" class="img-footer"></a>
-    <a href="https://github.com/Bogdyans" target="_blank"><img src="imgs/Octicons-mark-github.svg.png" width="75" class="img-footer"></a>
-    <a href="https://vk.com/bbarykin2001"><img src="imgs/vk-logo-transparent.png" width="75" class="img-footer"></a></p>
-</footer>
 
+<main class="Resume-main">
+  <div class="container container-main">
+  <h1>Send us your resume</h1>
+  <p>Please fill out this form with the required information</p>
+  <form method="post" action='' name="resume">
+    <fieldset>
+      <label for="first_name">Enter Your First Name: <input id="first_name" name="first_name" placeholder="Bogdan" type="text" required /></label>
+      <label for="last_name">Enter Your Last Name: <input id="last_name" name="last_name" placeholder="Barykin" type="text" required /></label>
+      <label for="email">Enter Your Email: <input id="email" name="email" type="email" placeholder="Bogdan@email.com" required /></label>
+    </fieldset>
+    <fieldset>
+      <legend>Front/Back</legend>
+      <div class="inline-r">
+        <label for="front"><input id="front" type="radio" name="front_end" class="inline" checked /> Front</label>
+        <label for="back"><input id="back" type="radio" name="front_end" class="inline" /> Back</label>
+      </div>
+    </fieldset>
+    <fieldset>
+      <label for="photo">Upload your photo: <input id="photo" type="file" name="file" /></label>
+      <label for="age">Input your age (years): <input id="age" type="number" name="age" min="13" max="120" /></label>
+      <label for="sex">Your Gender
+        <select id="sex" name="sex">
+          <option value="">(select one)</option>
+          <option value="1">Male</option>
+          <option value="2">Female</option>
+        </select>
+      </label>
+      <label for="bio">Provide a bio:
+        <textarea id="bio" name="bio" rows="3" cols="30" placeholder="I would like to become a hero"></textarea>
+      </label>
+    </fieldset>
+    <label for="terms_and_conditions">
+      <input class="inline" id="terms_and_conditions" type="checkbox" required name="terms_and_conditions" /> I accept the <a href="youtube.com">terms and conditions</a>
+    </label>
+    <input type="submit" value="Submit" />
+  </form>
+</div>
+</main>
+
+<footer></footer>
 </body>
 </html>
